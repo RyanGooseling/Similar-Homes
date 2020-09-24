@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "express": "^4.17.1",
+    "mongoose": "^5.10.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   }
