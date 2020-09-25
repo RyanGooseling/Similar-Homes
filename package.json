@@ -29,6 +29,8 @@
     "webpack-cli": "^3.3.12"
   },
   "dependencies": {
+    "eslint": "^7.9.0",
+    "eslint-config-hackreactor": "github:reactorcore/eslint-config-hackreactor",
     "express": "^4.17.1",
     "mongoose": "^5.10.6",
     "react": "^16.13.1",
