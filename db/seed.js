@@ -33,7 +33,7 @@ const getZip = function() {
 
 const getSeveralArrayItems = function(array, min, max) {
   var items = {};
-  var numItems = Math.floor(Math.random() * (max - min) + min);
+  var numItems = getNum(min, max);
   while (Object.keys(items).length < numItems) {
     items[getArrayItem(array)] = true;
   }
@@ -64,8 +64,8 @@ const create = function(_id, rootHouseId) {
     realtor: getArrayItem(realtors),
     listing: getNum(1000000, 10000000),
     tags: getSeveralArrayItems(tags, 2, 5),
-    videoTour: getBoolean(1/12),
-    '3dWalkthrough': getBoolean(1/12),
+    videoTour: getBoolean(1 / 12),
+    '3dWalkthrough': getBoolean(1 / 12),
     age: getNum(1, 360)
   };
 
@@ -84,5 +84,3 @@ for (var i = 1; i <= 100; i++) {
     create(5 * (i - 1) + j, i);
   }
 }
-
-console.log(':<<<)');
