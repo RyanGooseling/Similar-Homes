@@ -1,6 +1,6 @@
 const Similar = require('./index.js');
 
-const imageUrls = ['https://ssl.cdn-redfin.com/photo/94/ismphoto/098/genIsm.6019098_2.jpg', 'https://ssl.cdn-redfin.com/photo/94/ismphoto/398/genIsm.7064398_0.jpg', 'https://ssl.cdn-redfin.com/photo/94/ismphoto/314/genIsm.5995314_0.jpg', 'https://ssl.cdn-redfin.com/photo/94/ismphoto/833/genIsm.7394833_0.jpg'];
+const imageUrls = ['https://ns-fec-images.s3.amazonaws.com/1.jpg', 'https://ns-fec-images.s3.amazonaws.com/2.jpg', 'https://ns-fec-images.s3.amazonaws.com/3.jpg', 'https://ns-fec-images.s3.amazonaws.com/4.jpg'];
 
 const streetNames = ['Maywood', 'Ingleside', 'Keswick', 'Ross', '55th', 'Brookline', 'Blackstone'];
 
@@ -17,7 +17,7 @@ const tags = ['Garage', 'Parking', 'Hardwood Floor', 'Fireplace', 'Pool', 'Centr
 const getArrayItem = function(array) {
   var idx = Math.floor(Math.random() * array.length);
   return array[idx];
-}
+};
 
 const getNum = function(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
@@ -29,7 +29,7 @@ const getZip = function() {
     zip += getNum(0, 10);
   }
   return zip;
-}
+};
 
 const getSeveralArrayItems = function(array, min, max) {
   var items = {};
