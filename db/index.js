@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/FEC');
+mongoose.connect('mongodb://localhost/NSFEC');
 
 const homeSchema = mongoose.Schema({
   _id: Number,
