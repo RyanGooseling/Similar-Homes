@@ -9,6 +9,16 @@ app.get('/hello', (req, res) => {
   res.send('hello world!');
 });
 
+app.get('/homes/:id', (req, res) => {
+  Similar.find({rootHouseId: req.params.id}, (err, results) => {
+    if (err) {
+      res.status(400).send(err);
+    } else {
+      res.send(results);
+    }
+  });
+});
+
 app.listen(3001, () => {
   console.log('listening on 3001');
 });
