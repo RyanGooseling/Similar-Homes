@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const Similar = require('../db/index.js');
 
 const app = express();
 app.use(express.json());

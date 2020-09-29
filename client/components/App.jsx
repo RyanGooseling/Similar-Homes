@@ -1,13 +1,31 @@
 import React from 'react';
+import HomesList from './HomesList.jsx';
+import axios from 'axios';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
+    this.state = { homes: [] };
+  }
+
+  componentDidMount() {
+    var app = this;
+    var options = {
+      method: 'get',
+      url: 'http://localhost:3001/homes/2'
+    };
+    axios(options)
+      .then((results) => {
+        app.setState({ homes: results.data });
+      })
+      .catch((err) => {
+        console.error(err);
+      });
   }
 
   render() {
     return (
-      <div>I'm an app</div>
+      <HomesList homes={this.state.homes} />
     );
   }
 }
