@@ -12,8 +12,8 @@ app.get('/hello', (req, res) => {
   res.send('hello world!');
 });
 
-app.get('/homes/:id', (req, res) => {
-  Similar.find({rootHouseId: req.params.id}, (err, results) => {
+app.get('/data/homes/:id', (req, res) => {
+  Similar.find({ rootHouseId: req.params.id }, (err, results) => {
     if (err) {
       res.status(400).send(err);
     } else {
@@ -22,8 +22,8 @@ app.get('/homes/:id', (req, res) => {
   });
 });
 
-app.get('/test', (req, res) => {
-  res.render('similarHomes', { number: 16 });
+app.get('/homes/:id', (req, res) => {
+  res.render('similarHomes', { id: req.params.id });
 });
 
 app.listen(3001, () => {

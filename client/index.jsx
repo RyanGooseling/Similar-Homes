@@ -2,6 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App.jsx';
 
-console.log('yo');
+var id = document.getElementById('id').innerHTML;
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App id={id}/>, document.getElementById('app'));

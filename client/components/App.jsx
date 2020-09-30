@@ -12,7 +12,7 @@ class App extends React.Component {
     var app = this;
     var options = {
       method: 'get',
-      url: 'http://localhost:3001/homes/2'
+      url: `http://localhost:3001/data/homes/${this.props.id}`
     };
     axios(options)
       .then((results) => {
