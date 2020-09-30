@@ -6,7 +6,6 @@ const app = express();
 app.set('views', path.join(__dirname, '../views'));
 app.set('view engine', 'pug');
 app.use(express.json());
-app.use(express.static(path.join(__dirname, '../dist')));
 
 app.get('/hello', (req, res) => {
   res.send('hello world!');
@@ -23,7 +22,13 @@ app.get('/data/homes/:id', (req, res) => {
 });
 
 app.get('/homes/:id', (req, res) => {
-  res.render('similarHomes', { id: req.params.id });
+  Similar.find({ rootHouseId: req.params.id }, (err, results) => {
+    if (err) {
+      res.status(400).send(err);
+    } else {
+      res.render('similarHomes', { homes: JSON.stringify(results) });
+    }
+  });
 });
 
 app.listen(3001, () => {
