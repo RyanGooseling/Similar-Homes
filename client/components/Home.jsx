@@ -1,5 +1,7 @@
 import React from 'react';
 
+var key = 0;
+
 const Home = (props) => (
   <div>
     <div>
@@ -21,7 +23,7 @@ const Home = (props) => (
       <div>MLS {props.home.listing}</div>
     </div>
     <div>
-      {props.home.tags.split(',').map((tag) => (<div>{tag}</div>))}
+      {props.home.tags.split(',').map((tag) => (<div key={key++}>{tag}</div>))}
     </div>
   </div>
 );
