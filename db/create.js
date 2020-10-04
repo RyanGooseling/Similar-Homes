@@ -51,7 +51,7 @@ const create = function(_id, rootHouseId, callback = () => {}) {
     _id: _id,
     rootHouseId: rootHouseId,
     imageUrl: getArrayItem(imageUrls),
-    price: 1000 * getNum(150, 750),
+    price: getNum(150, 750),
     beds: getNum(1, 5),
     baths: getNum(1, 4),
     size: getNum(400, 1700),
@@ -67,9 +67,9 @@ const create = function(_id, rootHouseId, callback = () => {}) {
     realtor: getArrayItem(realtors),
     listing: getNum(1000000, 10000000),
     tags: getSeveralArrayItems(tags, 2, 5),
-    videoTour: getBoolean(1 / 12),
-    '3dWalkthrough': getBoolean(1 / 12),
-    age: getNum(1, 360)
+    videoTour: getBoolean(1 / 3),
+    '3dWalkthrough': getBoolean (1 / 3),
+    age: getNum(1, 144)
   };
 
   var similar = new Similar(house);
