@@ -10,11 +10,11 @@ const Home = (props) => (
       <div style={{ display: props.home['3dWalkthrough'] ? '' : 'none' }}>3D WALKTHROUGH</div>
       <div style={{ display: props.home.age <= 48 ? '' : 'none' }}>NEW LISTING: {props.home.age} hours ago</div>
     </div>
-    <div>${props.home.price}</div>
+    <div id='price'>${props.home.price}</div>
     <div>
-      <div>{props.home.beds} beds</div>
-      <div>{props.home.baths} baths</div>
-      <div>{props.home.size} Sq. Ft.</div>
+      <div className='ammenities'>{props.home.beds} beds</div>
+      <div className='ammenities'>{props.home.baths} baths</div>
+      <div className='ammenities'>{props.home.size} Sq. Ft.</div>
     </div>
     <div>{`${props.home.address.number} ${props.home.address.streetName} ${props.home.address.streetSuffix}, ${props.home.address.city}, ${props.home.address.state} ${props.home.address.zipcode}`}</div>
     <div>
