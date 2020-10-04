@@ -1,15 +1,9 @@
 import React from 'react';
+import HomesList from './HomesList.jsx';
+import axios from 'axios';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return (
-      <div>I'm an app</div>
-    );
-  }
-}
+const App = (props) => (
+  <HomesList homes={props.homes} />
+);
 
 export default App;

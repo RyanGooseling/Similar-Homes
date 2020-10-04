@@ -8,6 +8,8 @@ const streetSuffixes = ['St.', 'Rd.', 'Ave.'];
 
 const states = ['MA', 'MD', 'IL', 'WA', 'CA', 'NY', 'NJ', 'ME', 'CO', 'HI', 'FL'];
 
+const cities = ['Silver Spring', 'Boston', 'Chicago', 'Denver', 'Miami', 'Los Angeles', 'Springfield', 'North Haverbrook', 'Shelbyville'];
+
 const agencies = ['Milehimodern', 'Novella Real Estate', 'Compass', 'Nest Real Estate Group LLC'];
 
 const realtors = ['Thomas Harpole', 'Lora Griswold', 'Natalie Hengel', 'Perry Frietentag', 'Steven Reilly', 'Listy Lemon'];
@@ -57,6 +59,7 @@ const create = function(_id, rootHouseId, callback = () => {}) {
       number: getNum(1, 3000),
       streetName: getArrayItem(streetNames),
       streetSuffix: getArrayItem(streetSuffixes),
+      city: getArrayItem(cities),
       state: getArrayItem(states),
       zipcode: getZip()
     },

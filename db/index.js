@@ -13,6 +13,7 @@ const homeSchema = mongoose.Schema({
     number: Number,
     streetName: String,
     streetSuffix: String,
+    city: String,
     state: String,
     zipcode: String
   },

@@ -6,14 +6,6 @@ const axios = require('axios');
 const Similar = require('../db/index.js');
 const create = require('../db/create.js');
 
-describe('testing tests', () => {
-  test('identifies correctly', () => {
-    expect(1).toEqual(1);
-    expect(2).toBe(2);
-    expect(0).not.toBe(3);
-  });
-});
-
 describe('server', () => {
   test('receives server response \'hello world!\' from GET request to localhost:3001/hello', (done) => {
     var options = {
