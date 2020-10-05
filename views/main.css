@@ -82,3 +82,27 @@ img {
 .container .notes .new {
   background-color: green;
 }
+
+/* ============== */
+
+.item {
+  display: inline;
+  background-color: red;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.arrow {
+  display: inline;
+}
+
+.item-one {
+  color: green;
+  margin-right: 25px;
+  transition: left 2s;
+}
+
+.item-two {
+  color: pink;
+  transition: left 2s;
+}
