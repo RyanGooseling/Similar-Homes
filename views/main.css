@@ -1,6 +1,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: lighter;
+  display: inline-block;
 }
 h1 {
   font-size: 125%;
@@ -60,6 +61,7 @@ img {
 }
 .container {
   position: relative;
+  width: 390px;
   text-align: center;
 }
 .container .notes {
