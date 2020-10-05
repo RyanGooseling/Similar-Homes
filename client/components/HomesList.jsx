@@ -1,12 +1,25 @@
 import React from 'react';
 import Home from './Home.jsx';
 
-var key = 0;
+class HomesList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { idx: 0 };
+  }
 
-const HomesList = (props) => (
-  <div>
-    {props.homes.map((home) => (<Home home={home} key={key++}/>))}
-  </div>
-);
+  goLeft() {
+    this.setState({ idx: this.state.idx - 1 });
+  }
+
+  goRight() {
+    this.setState({ idx: this.state.idx + 1 });
+  }
+
+  render() {
+    return (
+      <Home home={this.props.homes[this.state.idx]} idx={this.state.idx} goLeft={this.goLeft.bind(this)} goRight={this.goRight.bind(this)} max={this.props.homes.length - 1}/>
+    );
+  }
+}
 
 export default HomesList;

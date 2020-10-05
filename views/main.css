@@ -48,8 +48,8 @@ h1 {
   font-size: 85%
 }
 img {
-  height: 250px;
-  width: 375px;
+  height: 260px;
+  width: 390px;
 }
 .home {
   box-shadow: 0 0 10px rgb(226, 226, 226);
@@ -83,37 +83,20 @@ img {
   background-color: green;
 }
 
-/* ============== */
-
-.item {
-  display: inline;
-  background-color: red;
-  padding-left: 10px;
-  padding-right: 10px;
+.container .arrow {
+  top: 200px;
+  border: 1px solid black;
+  border-radius: 100px;
 }
 
-.arrow {
-  display: inline;
+.container .left-arrow {
+  position: absolute;
+  left: -10px;
+  font-size: 150%;
 }
 
-.item {
-  transition-property: all;
-  transition-duration: 3s;
-  transition-timing-function: linear;
-  transition-delay: 1s;
-}
-
-.item-one {
-  color: green;
-  margin-right: 25px;
-  transition: left 2s;
-}
-
-.item-two {
-  color: pink;
-  transition: left 2s;
-}
-
-.transitioned {
-  color: pink;
+.container .right-arrow {
+  position: absolute;
+  left: 385px;
+  font-size: 150%;
 }

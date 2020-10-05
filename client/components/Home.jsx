@@ -1,7 +1,5 @@
 import React from 'react';
 
-var key = 0;
-
 const Home = (props) => (
   <div className='home'>
     <div className='container'>
@@ -11,6 +9,8 @@ const Home = (props) => (
         <div style={{ display: props.home.videoTour ? '' : 'none' }}>VIDEO TOUR</div>
         <div style={{ display: props.home['3dWalkthrough'] ? '' : 'none' }}>3D WALKTHROUGH</div>
       </div>
+      <div className='arrow left-arrow' onClick={() => { props.goLeft(); }} style={{ display: props.idx === 0 ? 'none' : '' }}>{'<'}</div>
+      <div className='arrow right-arrow' onClick={() => { props.goRight(); }} style={{ display: props.idx === props.max ? 'none' : '' }}>{'>'}</div>
     </div>
     <div className='text'>
       <div className='price'>${props.home.price + ',000'}</div>
@@ -28,7 +28,7 @@ const Home = (props) => (
         <div>MLS {props.home.listing}</div>
       </div>
       <div className='tags'>
-        {props.home.tags.split(',').map((tag) => (<div key={key++}>{tag}</div>))}
+        {props.home.tags.split(',').map((tag, i) => (<div key={i}>{tag}</div>))}
       </div>
     </div>
   </div>
