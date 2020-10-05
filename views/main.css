@@ -96,6 +96,13 @@ img {
   display: inline;
 }
 
+.item {
+  transition-property: all;
+  transition-duration: 3s;
+  transition-timing-function: linear;
+  transition-delay: 1s;
+}
+
 .item-one {
   color: green;
   margin-right: 25px;
@@ -105,4 +112,8 @@ img {
 .item-two {
   color: pink;
   transition: left 2s;
+}
+
+.transitioned {
+  color: pink;
 }

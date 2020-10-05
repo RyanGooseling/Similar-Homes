@@ -18,11 +18,15 @@ class Carousel extends React.Component {
     this.setState({ idx: this.state.idx - 2 });
   }
 
+  handleClick(e) {
+    e.target.style.color = 'yellow';
+  }
+
   render() {
     return (
       <div className='carousel'>
         <div className='arrow leftarrow' onClick={this.goLeft.bind(this)} style={{ display: this.state.idx === 0 ? 'none' : '' }}>{'<'}</div>
-        {this.state.items.slice(this.state.idx, this.state.idx + 2).map((item) => (<div className={`item item-${this.key % 2 === 0 ? 'one' : 'two'}`} key={this.key++}>{item}</div>))}
+        {this.state.items.slice(this.state.idx, this.state.idx + 2).map((item) => (<div className={`item item-${this.key % 2 === 0 ? 'one' : 'two'}`} key={this.key++} onClick={this.handleClick.bind(this)}>{item}</div>))}
         <div className='arrow rightarrow' onClick={this.goRight.bind(this)} style={{ display: this.state.idx === this.state.items.length - 2 ? 'none' : '' }}>{'>'}</div>
       </div>
     );
