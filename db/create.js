@@ -51,7 +51,7 @@ const create = function(_id, rootHouseId, callback = () => {}) {
     _id: _id,
     rootHouseId: rootHouseId,
     imageUrl: getArrayItem(imageUrls),
-    price: 1000 * getNum(150, 750),
+    price: getNum(150, 750),
     beds: getNum(1, 5),
     baths: getNum(1, 4),
     size: getNum(400, 1700),
@@ -67,9 +67,9 @@ const create = function(_id, rootHouseId, callback = () => {}) {
     realtor: getArrayItem(realtors),
     listing: getNum(1000000, 10000000),
     tags: getSeveralArrayItems(tags, 2, 5),
-    videoTour: getBoolean(1 / 12),
-    '3dWalkthrough': getBoolean(1 / 12),
-    age: getNum(1, 360)
+    videoTour: getBoolean(1 / 3),
+    '3dWalkthrough': getBoolean (1 / 3),
+    age: getNum(1, 144)
   };
 
   var similar = new Similar(house);
@@ -82,4 +82,91 @@ const create = function(_id, rootHouseId, callback = () => {}) {
   });
 };
 
-module.exports = create;
+const seed = function() {
+  Similar.deleteMany({}, (err) => {
+    if (err) {
+      console.error(err);
+    } else {
+      var docs = [];
+      var _id = 0;
+      var rootHouseId = 1;
+      const addOne = function() {
+        docs.push({
+          _id: _id,
+          rootHouseId: rootHouseId,
+          imageUrl: getArrayItem(imageUrls),
+          price: getNum(150, 750),
+          beds: getNum(1, 5),
+          baths: getNum(1, 4),
+          size: getNum(400, 1700),
+          address: {
+            number: getNum(1, 3000),
+            streetName: getArrayItem(streetNames),
+            streetSuffix: getArrayItem(streetSuffixes),
+            city: getArrayItem(cities),
+            state: getArrayItem(states),
+            zipcode: getZip()
+          },
+          agency: getArrayItem(agencies),
+          realtor: getArrayItem(realtors),
+          listing: getNum(1000000, 10000000),
+          tags: getSeveralArrayItems(tags, 2, 5),
+          videoTour: getBoolean(1 / 3),
+          '3dWalkthrough': getBoolean (1 / 3),
+          age: getNum(1, 144)
+        });
+        _id++;
+        if (_id % 6 === 0) {
+          rootHouseId++;
+        }
+      };
+      while (rootHouseId <= 100) {
+        addOne();
+      }
+      Similar.insertMany(docs);
+    }
+  });
+};
+
+// var docs = [];
+// var _id = 0;
+// var rootHouseId = 1;
+
+// var addOne = function() {
+//   docs.push({
+//     _id: _id,
+//     rootHouseId: rootHouseId,
+//     imageUrl: getArrayItem(imageUrls),
+//     price: getNum(150, 750),
+//     beds: getNum(1, 5),
+//     baths: getNum(1, 4),
+//     size: getNum(400, 1700),
+//     address: {
+//       number: getNum(1, 3000),
+//       streetName: getArrayItem(streetNames),
+//       streetSuffix: getArrayItem(streetSuffixes),
+//       city: getArrayItem(cities),
+//       state: getArrayItem(states),
+//       zipcode: getZip()
+//     },
+//     agency: getArrayItem(agencies),
+//     realtor: getArrayItem(realtors),
+//     listing: getNum(1000000, 10000000),
+//     tags: getSeveralArrayItems(tags, 2, 5),
+//     videoTour: getBoolean(1 / 3),
+//     '3dWalkthrough': getBoolean (1 / 3),
+//     age: getNum(1, 144)
+//   });
+//   _id++;
+//   if (_id % 6 === 0) {
+//     rootHouseId++;
+//   }
+// };
+
+// while (rootHouseId <= 100) {
+//   addOne();
+// }
+
+// Similar.insertMany(docs);
+
+module.exports = seed;
