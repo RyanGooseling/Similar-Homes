@@ -37,6 +37,7 @@
     "mongoose": "^5.10.6",
     "pug": "^3.0.0",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-responsive-carousel": "^3.2.10"
   }
 }

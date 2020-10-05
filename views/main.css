@@ -55,6 +55,8 @@ img {
 .home {
   box-shadow: 0 0 10px rgb(226, 226, 226);
   margin-right: 647px;
+  display: inline;
+      /* this doesn't work, also wrecks hover shadow? */
 }
 .home:hover {
   box-shadow: 0 0 10px rgb(139, 134, 134);

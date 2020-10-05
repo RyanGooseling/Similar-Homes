@@ -9,8 +9,8 @@ const Home = (props) => (
         <div style={{ display: props.home.videoTour ? '' : 'none' }}>VIDEO TOUR</div>
         <div style={{ display: props.home['3dWalkthrough'] ? '' : 'none' }}>3D WALKTHROUGH</div>
       </div>
-      <div className='arrow left-arrow' onClick={() => { props.goLeft(); }} style={{ display: props.idx === 0 ? 'none' : '' }}>{'<'}</div>
-      <div className='arrow right-arrow' onClick={() => { props.goRight(); }} style={{ display: props.idx === props.max ? 'none' : '' }}>{'>'}</div>
+      {/* <div className='arrow left-arrow' onClick={() => { props.goLeft(); }} style={{ display: props.idx === 0 ? 'none' : '' }}>{'<'}</div>
+      <div className='arrow right-arrow' onClick={() => { props.goRight(); }} style={{ display: props.idx === props.max ? 'none' : '' }}>{'>'}</div> */}
     </div>
     <div className='text'>
       <div className='price'>${props.home.price + ',000'}</div>
