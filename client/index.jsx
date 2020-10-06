@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App.jsx';
 
-var homes = JSON.parse(document.getElementById('homes').innerHTML);
+console.log(window.location.pathname.slice(7, -1));
+const id = window.location.pathname.slice(7, -1);
 
-ReactDOM.render(<App homes={homes}/>, document.getElementById('app'));
+ReactDOM.render(<App id={id} />, document.getElementById('similar-homes-app'));

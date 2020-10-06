@@ -54,6 +54,7 @@ img {
 .home {
   box-shadow: 0 0 10px rgb(226, 226, 226);
   margin-right: 647px;
+  width: 390px;
 }
 .home:hover {
   box-shadow: 0 0 10px rgb(139, 134, 134);
@@ -61,6 +62,7 @@ img {
 .container {
   position: relative;
   text-align: center;
+  width: 390px;
 }
 .container .notes {
   position: absolute;
