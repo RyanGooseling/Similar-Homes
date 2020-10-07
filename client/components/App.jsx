@@ -12,7 +12,7 @@ class App extends React.Component {
     const app = this;
     const options = {
       method: 'get',
-      url: `http://localhost:3001/data/homes/${this.props.id}`
+      url: `/data/homes/${this.props.id}`
     };
     axios(options)
       .then((results) => {
@@ -25,7 +25,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <HomesList homes={this.state.homes} />
+      <div>
+        <HomesList homes={this.state.homes} />
+      </div>
     );
   }
 }
