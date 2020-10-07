@@ -5,6 +5,7 @@ const Similar = require('../db/index.js');
 const app = express();
 app.use(express.json());
 app.use('/homes/:id', express.static(path.join(__dirname, '../dist')));
+// app.use(express.static(path.join(__dirname, '../dist')));
 
 app.get('/hello', (req, res) => {
   res.send('hello world!');
