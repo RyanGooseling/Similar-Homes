@@ -1,31 +1,31 @@
-body {
+.nssh-main {
   font-family: 'Open Sans', sans-serif;
   font-weight: lighter;
 }
-h1 {
+.nssh-h1 {
   font-size: 125%;
 }
-.text {
+.nssh-text {
   padding-left: 15px;
 }
-.ammenities {
+.nssh-ammenities {
   display: inline;
   padding-right: 10px;
 }
-.realty div {
+.nssh-realty div {
   display: inline;
   padding-right: 3px;
   color: rgb(170, 170, 170);
   font-size: 70%;
 }
-.realty {
+.nssh-realty {
   padding-bottom: 10px;
 }
-.tags {
+.nssh-tags {
   padding-bottom: 35px;
   display: flex;
 }
-.tags div {
+.nssh-tags div {
   display: inline;
   margin-right: 5px;
   padding-left: 10px;
@@ -36,40 +36,40 @@ h1 {
   border-radius: 20px;
   font-size: 85%;
 }
-.price {
+.nssh-price {
   font-weight: bold;
   font-size: 125%;
   padding-top: 10px;
   padding-bottom: 7px;
 }
-.address {
+.nssh-address {
   padding-top: 5px;
   padding-bottom: 5px;
   font-size: 85%
 }
-img {
+.nssh-img {
   height: 260px;
   width: 390px;
 }
-.home {
+.nssh-home {
   box-shadow: 0 0 10px rgb(226, 226, 226);
   margin-right: 647px;
   width: 390px;
 }
-.home:hover {
+.nssh-home:hover {
   box-shadow: 0 0 10px rgb(139, 134, 134);
 }
-.container {
+.nssh-container {
   position: relative;
   text-align: center;
   width: 390px;
 }
-.container .notes {
+.nssh-container .nssh-notes {
   position: absolute;
   top: 8px;
   left: 5px;
 }
-.container .notes div {
+.nssh-container .nssh-notes div {
   background-color: #7556f2;
   color: white;
   border-radius: 20px;
@@ -81,24 +81,24 @@ img {
   font-size: 75%;
   display: inline;
 }
-.container .notes .new {
+.nssh-container .nssh-notes .nssh-new {
   background-color: green;
 }
 
-.container .arrow {
+.nssh-container .nssh-arrow {
   top: 200px;
   border: 1px solid black;
   border-radius: 100px;
   background-color: white;
 }
 
-.container .left-arrow {
+.nssh-container .nssh-left-arrow {
   position: absolute;
   left: -10px;
   font-size: 150%;
 }
 
-.container .right-arrow {
+.nssh-container .nssh-right-arrow {
   position: absolute;
   left: 385px;
   font-size: 150%;

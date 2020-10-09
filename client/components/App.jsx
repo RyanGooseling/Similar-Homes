@@ -25,7 +25,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='nssh-main'>
+        <h1 className='nssh-h1'>Nearby Similar Homes</h1>
         <HomesList homes={this.state.homes} />
       </div>
     );
