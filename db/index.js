@@ -1,5 +1,6 @@
+const url = require('./secrets.js');
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/NSFEC');
+mongoose.connect(url);
 
 const homeSchema = mongoose.Schema({
   _id: Number,
